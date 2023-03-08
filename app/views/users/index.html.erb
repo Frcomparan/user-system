@@ -1,0 +1,42 @@
+
+<div class="index">
+  <h1>Users</h1>
+  <p style="text-align: end; width: 100%; margin: 0;">
+    <%= link_to "New user", new_user_path, class:'btn btn-primary' %>
+  </p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          Id
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          Salary
+        </th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody style="color: black;">
+      <% @users.each do |user| %>
+        </tr>
+            <td>
+              <%= user.id %>
+            </td>
+            <td>
+              <%= user.name %>
+            </td>
+            <td>
+              $ <%= user.salary %>
+            </td>
+            <td>
+              <%= link_to "Show this user", user, class:'btn btn-success' %>
+              <%= button_to "Destroy this user", @user, method: :delete, class:'btn btn-danger' %>
+            </td>
+        <tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

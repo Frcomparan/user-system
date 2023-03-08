@@ -1,0 +1,14 @@
+<div class="index">
+    <h1>Details</h1>
+
+    <div class="details">
+      <h4>User</h4>
+      <hr />
+      <%= render @user %>
+
+    </divcla>
+    <div>
+      <%= link_to "Edit this user", edit_user_path(@user), class:'btn btn-primary' %> |
+      <%= link_to "Back to users", users_path, class:'btn btn-success ' %> |
+    </div>
+</div>
