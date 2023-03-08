@@ -14,6 +14,15 @@ html {
 	}
 }
 
+nav {
+	z-index: 1;
+}
+
+body {
+	background-image: url('https://e0.pxfuel.com/wallpapers/520/1013/desktop-wallpaper-cool-landscape-night-minimal-art-laptop-minimalist-and-background-minimalist-laptop.jpg');
+	background-size: cover;
+}
+
 html {
 	position: relative;
 	min-height: 100%;
@@ -21,10 +30,30 @@ html {
 
 main {
 	min-height: calc(100vh - 140px);
+
+	& > section,
+	& > section.jumbotron {
+		background: none;
+		color: white;
+		padding-top: 2rem;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
 }
 
 footer {
 	font-size: 13px;
+	z-index: 1;
+}
+
+.blur-effect {
+	min-width: 100%;
+	min-height: 100vh;
+	background: rgba(0, 0, 0, 0.253);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7.7px);
+	-webkit-backdrop-filter: blur(7.7px);
+	border: 1px solid rgba(0, 0, 0, 0.09);
 }
 
 .home-container {
@@ -114,15 +143,17 @@ table {
 	margin-top: 10px;
 }
 
-.details {
-	background-color: white;
-	border-radius: 8px;
+.navbar a {
+	color: white;
 }
 
 .index {
 	display: grid;
 	row-gap: 10px;
 	margin: 20px 10%;
+	background-color: rgba(216, 216, 216, 0.521);
+	padding: 20px;
+	border-radius: 10px;
 }
 
 .details hr {

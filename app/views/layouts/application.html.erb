@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NewUsers</title>
+    <title>User System</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -13,20 +13,22 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/" >Users system</a>
-        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-          <ul class="navbar-nav flex-grow-1">
-            <li class="nav-item">
-              <%= link_to "Users", users_path, class:'nav-link text-light' %>
-            </li>
-          </ul>
+    <div class="blur-effect">
+      <nav class="navbar navbar-expand-sm navbar-toggleable-sm text-light border-bottom box-shadow">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/" >Users System</a>
+          <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1">
+              <li class="nav-item">
+                <%= link_to "Users", users_path, class:'nav-link' %>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-    <main class="my-container">
-      <%= yield %>
-    </main>
+      </nav>
+      <main class="my-container">
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>
